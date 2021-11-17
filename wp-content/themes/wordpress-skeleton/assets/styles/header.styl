@@ -1,0 +1,140 @@
+.admin-bar
+  .header
+    top 2rem
+
+.header
+  position sticky
+  top 0
+  background white
+  box-shadow 0 1px 1px rgba(0, 0, 0, .1)
+  min-height 4.375rem
+  max-height 4.375rem
+
+  &__container
+    paddedContainer()
+    display flex
+    flex-wrap wrap
+    align-items center
+    justify-content space-between
+    padding-top 1rem
+    margin auto
+
+  &__actions
+    display flex
+    width 4.375rem
+    align-items center
+
+  &__logo
+    max-width calc(100% - 4.375rem)
+    line-height 1
+
+    img
+      width 100%
+      padding-right .7rem
+
+  &__nav
+    width 100vw
+    margin 0 -1.25rem
+    background white
+    will-change max-height, opacity
+    max-height 0
+    overflow hidden
+    transition max-height .2s ease-out, opacity .1s ease-out
+    opacity 0
+
+    &--open
+      max-height 100vh
+      transition max-height .2s ease-out, opacity .1s ease-out
+      opacity 1
+
+  &__btn
+    &--hamburger
+      btn()
+      box-shadow none
+      border none
+      background none
+      padding 0 0 0 .7rem
+      margin-top 0
+
+  @media (min-width 1250px)
+    align-items center
+    display flex
+
+    &__actions
+      display none
+
+    &__container
+      padding-top unset
+
+    &__nav
+      opacity 1
+      max-height unset
+      width auto
+      background unset
+      margin unset
+      padding unset
+      overflow unset
+
+    .nav
+      &__sub
+        &-trigger
+          width auto
+          height auto
+          min-height unset
+          cursor pointer
+          padding 0
+          border-radius 3px
+          transition background 100ms ease
+          margin-left .2rem
+
+          &:hover
+            background rgba(0, 0, 0, 0.1)
+
+          .icon
+            transform rotate3d(0, 0, 1, 90deg) scale(0.8)
+
+            &--active
+              transform rotate3d(0, 0, 1, 90deg) scale(0.8) rotate3d(0, 1, 0, 180deg)
+
+        &-link
+          font-size .9rem
+          padding-left 0
+          color rgb(51, 51, 51)
+
+          &:hover
+            color linkBlue
+
+        &-item
+          display flex
+          align-items center
+
+        &-list
+          position absolute
+          transition transform 200ms cubic-bezier(0.74, 0.11, 0.32, 0.99), opacity 240ms cubic-bezier(0.74, 0.11, 0.32, 0.99)
+          transform scale(0.8)
+          opacity 0
+
+          &--active
+            complexShadow()
+            padding 1.1rem 1.25rem 0.675rem
+            width auto
+            top 3.2rem
+            left 0
+            min-width 14rem
+            background white
+            border-radius 5px
+            transform scale(1)
+            opacity 1
+
+      &__item
+        width auto
+        padding 0.625rem
+        position relative
+
+        &:last-of-type
+          padding-top unset
+          padding-bottom unset
+
+      &__link
+        min-height unset
+        width auto

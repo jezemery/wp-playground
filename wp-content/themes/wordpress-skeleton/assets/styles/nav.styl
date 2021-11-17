@@ -1,0 +1,77 @@
+.nav
+  width 100%
+  padding 0
+
+  &__sub
+    &-trigger
+      width 50px
+      min-height 50px
+      overflow hidden
+      background none
+      border none
+
+    &-link
+      text-transform none
+      font-size 0.8rem
+      font-weight normal
+      display flex
+      padding 0 0 0 0.75rem
+
+      &:first-of-type
+        padding-top 0
+
+    &-item
+      padding .3rem 0
+
+      &:first-of-type
+        padding-top 0
+
+    &-list
+      list-style-type none
+      padding 0
+      overflow hidden
+      max-height 0
+      will-change max-height
+      transition max-height .3s ease-out
+      width 100%
+
+      &--active
+        max-height 600px
+        transition max-height .3s ease-in
+
+
+  &__item
+    font-size 0.75rem
+    font-weight bold
+    text-transform uppercase
+    width 100%
+    display flex
+    flex-wrap wrap
+    list-style-type none
+
+    &--btn
+      width 100%
+
+      .nav__link
+        coloredBtn(brandBlue)
+        width 100%
+        min-height unset
+
+
+    &--header
+      font-size 0.75rem
+      font-weight bold
+      text-transform uppercase
+      width 100%
+
+    &:last-of-type
+      padding-bottom 20px
+
+  &__link
+    color #4c4b4f
+    min-height 50px
+    display flex
+    align-items center
+    width calc(100% - 50px)
+
+

@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "psr-4": {
+      "WPSKL\\": "src"
+    }
+  },
+  "require": {
+    "nanosoup/zeus": "^1.0",
+    "timber/timber": "^1.19"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}

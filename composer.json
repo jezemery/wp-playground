@@ -1,0 +1,9 @@
+{
+  "require": {
+    "symfony/dotenv": "^5.3",
+    "humanmade/s3-uploads": "^3.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}

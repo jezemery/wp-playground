@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+<head>
+    {% block head %}
+        <meta charset="{{ site.charset }}"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+
+        {# These are just here to keep things tidy #}
+        {% include 'partials/favicon.twig' %}
+        {% include 'partials/rdf.twig' %}
+
+        <link rel="pingback" href="{{ fn('bloginfo', 'pingback_url') }}">
+
+        {{ fn('wp_head') }}
+    {% endblock %}
+</head>
+<body {{ fn('body_class') }}>
+{% block body %}
+    {% block header %}
+        {% include 'partials/header.twig' %}
+    {% endblock %}
+
+    <main class="main">
+        {% block main %}{% endblock %}
+    </main>
+
+    {% block footer %}
+        {% include 'partials/footer.twig' %}
+    {% endblock %}
+{% endblock %}
+{{ fn('wp_footer') }}
+</body>
+</html>

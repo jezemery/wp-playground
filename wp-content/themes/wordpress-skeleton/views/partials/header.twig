@@ -1,0 +1,14 @@
+<header class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="{{ site.url }}">{{ fn(["WPSKL\\Wordpress\\ThemeManager", 'getCustomLogo']) }}</a>
+        </div>
+        <div class="header__actions">
+            <a href="tel:" class="icon icon--phone">phone</a>
+            <button class="header__btn header__btn--hamburger" data-action="toggle-menu">
+                <span class="icon icon--menu">menu</span>
+            </button>
+        </div>
+        {{ menus.primary }}
+    </div>
+</header>

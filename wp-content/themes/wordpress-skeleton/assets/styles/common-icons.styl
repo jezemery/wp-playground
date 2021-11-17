@@ -1,0 +1,53 @@
+.icon
+  background-size contain
+  background-repeat no-repeat
+  background-position center
+  overflow hidden
+  width 1.625rem
+  height 1.625rem
+  display inline-flex
+  text-indent 100%
+
+  &--animated
+    will-change opacity
+    transition opacity 120ms ease-in, transform 120ms ease-in
+    opacity .6
+
+    &:hover
+      opacity 1
+      transform translateY(-0.2rem)
+      will-change opacity
+      transition opacity 120ms ease-in, transform 120ms ease-in
+
+  &--phone
+    background-image url("../images/icons/phone.svg")
+    transform rotate(90deg)
+    width 1.5rem
+    height 1.5rem
+
+  &--menu
+    background-image url("../images/icons/menu.svg")
+    height 2rem
+    width 2rem
+
+  &--facebook
+    background-image url("../images/icons/facebook.svg")
+
+  &--twitter
+    background-image url("../images/icons/twitter.svg")
+
+  &--youtube
+    background-image url("../images/icons/youtube.svg")
+
+  &--linkedin
+    background-image url("../images/icons/linkedin.svg")
+
+  &--chevron-right
+    background-image url("../images/icons/chevron-right.svg")
+    will-change transform
+    transition transform .2s
+
+  &--chevron-right.icon--active
+    transform rotate3d(0, 0, 1, 90deg)
+    will-change transform
+    transition transform .2s

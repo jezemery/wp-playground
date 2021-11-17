@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "WPBLOX\\": "src"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}

@@ -1,0 +1,52 @@
+# Template PHP Build
+
+# This template allows you to validate your PHP application.
+# The workflow allows running tests and code linting on the default branch.
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Build
+            image: composer:2.0
+            script:
+              - composer install
+            caches:
+              - composer
+            artifacts:
+              - vendor/**
+        - step:
+            name: Build
+            image: composer:2.0
+            script:
+              - cd wp-content/themes/scrapcarcomparison/
+              - composer install
+            caches:
+              - composer
+            artifacts:
+              - wp-content/themes/scrapcarcomparison/vendor/**
+        - step:
+            name: Build
+            image: node:lts-alpine
+            script:
+              - cd wp-content/themes/scrapcarcomparison/assets/
+              - yarn
+              - yarn build
+            caches:
+              - node
+            artifacts:
+              - wp-content/themes/scrapcarcomparison/assets/dist/**
+    - step:
+        name: Deploy to test
+        deployment: test
+        trigger: manual
+        script:
+          - echo "Deploying to test environment"
+          - pipe: atlassian/rsync-deploy:0.6.1
+            variables:
+              USER: 'scc_stage'
+              SERVER: $APP_SERVER
+              REMOTE_PATH: '/var/www/scrapcarcomparison.co.uk/stage/'
+              LOCAL_PATH: $BITBUCKET_CLONE_DIR
+              DELETE_FLAG: 'true'
+              EXTRA_ARGS: '--exclude=.env.*'

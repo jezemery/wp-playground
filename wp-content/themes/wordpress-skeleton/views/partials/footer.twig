@@ -1,0 +1,46 @@
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__left">
+            {{ fn(["WPSKL\\Wordpress\\ThemeManager", 'getCustomLogo']) }}
+            <div class="footer__social">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                   aria-label="Facebook"
+                   class="icon icon--animated icon--facebook footer__social-link">Facebook</a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
+                   aria-label="Twitter"
+                   class="icon icon--animated icon--twitter footer__social-link">Twitter</a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube"
+                   class="icon icon--animated icon--youtube footer__social-link">Youtube</a>
+                <a href="https://uk.linkedin.com/" target="_blank"
+                   rel="noopener noreferrer" aria-label="LinkedIn"
+                   class="icon icon--animated icon--linkedin footer__social-link">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__tl">
+                <h3 class="footer__subtitle">Subtitle</h3>
+                {{ menus.footer.tl }}
+            </div>
+            <div class="footer__tr">
+                <h3 class="footer__subtitle">Subtitle</h3>
+                {{ menus.footer.tr }}
+            </div>
+            <div class="footer__bl">
+                <h3 class="footer__subtitle">Subtitle</h3>
+                {{ menus.footer.bl }}
+            </div>
+            <div class="footer__br">
+                <h3 class="footer__subtitle">Subtitle</h3>
+                {{ menus.footer.br }}
+            </div>
+        </div>
+    </div>
+    <div class="footer__container footer__container--bottom">
+        {{ menus.footer.tail }}
+        <div class="footer__copyright">
+            &copy; 1992 - {{ 'now' | date('Y') }} <a class="" href="{{ site.url }}">{{ site.name }}</a>. All Rights
+            Reserved.
+        </div>
+    </div>
+</footer>

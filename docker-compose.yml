@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      target: app_php
+    image: php:7.4-fpm
+    restart: on-failure
+    environment:
+      PHP_DATE_TIMEZONE: ${PHP_DATE_TIMESZONE:-UTC}
+    volumes:
+    - .:/app:rw,cached
+
+  nginx:
+    build:
+      context: .
+      target: app_nginx
+    image: nginx:1.19.10
+    restart: on-failure
+    depends_on:
+      - php
+    volumes:
+      - ./:/app:ro
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d:ro,delegate
+    ports:
+      - "80:80"
+
+  mysql:
+    build:
+      context: .
+      target: app_mysql
+    image: mariadb:latest
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./db:/var/lib/mysql
+    depends_on:
+      - php
+    ports:
+      - "3306:3306"

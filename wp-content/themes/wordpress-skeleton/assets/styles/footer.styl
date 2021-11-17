@@ -1,0 +1,110 @@
+.footer
+  color rgb(88, 88, 88)
+  padding 3.75rem 0
+  font-size 0.8rem
+  background white
+
+  &__container
+    paddedContainer()
+    display flex
+    align-items center
+    height 100%
+    margin auto
+    justify-content space-between
+    flex-wrap wrap
+
+    &--bottom
+      border-top 1px solid rgb(173, 178, 182)
+      width 100%
+      padding-top 1.25rem
+      padding-bottom 1.25rem
+      margin-top 1rem
+
+  &__copyright
+    text-align center
+    margin-top 1.2rem
+    width 100%
+
+  &__right
+    display flex
+    flex-wrap wrap
+    margin-top 1.5rem
+
+  &__title
+    font-size 0.9rem
+
+  &__subtitle
+    padding-right 0.5rem
+
+  &__tr, &__tl, &__br, &__bl
+    flex-basis 50%
+    margin 0 0 0.5rem 0
+
+    .nav__item
+      width 100%
+      padding 0
+
+  &__social
+    display flex
+    align-items center
+    justify-content space-between
+    padding 2rem 2rem 0 2rem
+
+  .nav__link
+    color inherit
+    text-transform none
+    min-height unset
+    font-weight normal
+    margin-bottom .2rem
+
+  &__subnav
+    width 100%
+    display flex
+    justify-content space-between
+
+    .nav
+      &__link
+        color inherit
+        width auto
+        font-size .7rem
+
+      &__item
+        width unset
+
+        &:last-of-type
+          padding-bottom unset
+
+  @media (min-width 768px)
+    &__container
+      align-items flex-start
+
+    &__left, &__right
+      flex-basis 50%
+
+    &__left
+      padding-right 2rem
+
+    &__right
+      margin-top 0
+
+    &__subnav
+      width auto
+      margin 0
+
+    .nav
+      &__item
+        margin-right 1.2rem
+
+    &__copyright
+      width auto
+      font-size 0.7rem
+      margin 0
+
+    &__social
+      padding-left 0
+      padding-right 0
+      justify-content flex-start
+      margin-bottom 1rem
+
+    &__social-link
+      margin-right 2rem

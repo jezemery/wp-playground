@@ -1,0 +1,10 @@
+{
+    "require": {
+        "nanosoup/nemesis": "^1.02"
+    },
+    "autoload": {
+        "psr-4": {
+            "SCC\\" : "src"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/.idea/
+/vendor/
+/.vscode/
+/.idea/
+
+/wp-content/uploads/
+/wp-content/upgrade/
+
+.env.*
+/db/
+.DS_Store

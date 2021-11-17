@@ -1,0 +1,56 @@
+/** This should only ever be base styles present on EVERY page **/
+@import "variables.styl"
+@import "mixins.styl"
+
+*, *:before, *:after
+  box-sizing border-box
+
+html, body
+  padding 0
+  margin 0
+  width 100%
+  height 100%
+  font-size fontSize
+
+body
+  -webkit-font-smoothing antialiased
+  color #707070
+  font-family "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+  letter-spacing 0.01em
+  line-height 1.4
+  background rgba(0, 0, 0, 0.03)
+
+h1, h2, h3, h4, h5, h6
+  color #707070
+  text-transform capitalize
+
+a
+  position relative
+  text-decoration none
+  color linkBlue
+
+  &:hover
+    color darken(linkBlue, 15%)
+
+.container
+  paddedContainer()
+  margin auto
+  overflow auto
+
+.btn
+  btn()
+
+  &--primary
+    background brandBlue
+
+    &:hover
+      background darken(brandBlue, 20%)
+
+.main
+  min-height calc(100vh - 80px)
+
+@import "fonts.styl"
+@import "common-icons.styl"
+@import "nav.styl"
+@import "header.styl"
+@import "footer.styl"

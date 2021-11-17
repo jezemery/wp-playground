@@ -1,0 +1,64 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d6a4e6ea61e6123db5c0a5b7ef2b57fe",
+    "packages": [
+        {
+            "name": "nanosoup/nemesis",
+            "version": "1.02",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NanoSoup/Nemesis.git",
+                "reference": "5d7677375676e7e461cf27c324570d42355fce60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NanoSoup/Nemesis/zipball/5d7677375676e7e461cf27c324570d42355fce60",
+                "reference": "5d7677375676e7e461cf27c324570d42355fce60",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "exussum12/coverage-checker": "^0.11.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NanoSoup\\Nemesis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Harry Wiseman",
+                    "email": "enquiries@harry-wiseman.co.uk"
+                },
+                {
+                    "name": "Jez Emery",
+                    "email": "github@hiohzo.com"
+                }
+            ],
+            "description": "Nemesis Bundle",
+            "support": {
+                "issues": "https://github.com/NanoSoup/Nemesis/issues",
+                "source": "https://github.com/NanoSoup/Nemesis/tree/1.02"
+            },
+            "time": "2019-11-07T14:21:53+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

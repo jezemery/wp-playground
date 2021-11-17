@@ -1,0 +1,60 @@
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+complexShadow()
+  box-shadow 0 0.5px 0.3px rgba(0, 0, 0, 0.021),
+  0 0.7px 0.7px rgba(0, 0, 0, 0.031),
+  0 0.9px 1.2px rgba(0, 0, 0, 0.038),
+  0 1.1px 1.7px rgba(0, 0, 0, 0.044),
+  0 1.4px 2.5px rgba(0, 0, 0, 0.05),
+  0 1.6px 3.5px rgba(0, 0, 0, 0.056),
+  0 1.9px 5px rgba(0, 0, 0, 0.062),
+  0 2.3px 7.3px rgba(0, 0, 0, 0.069),
+  0 2.9px 11.3px rgba(0, 0, 0, 0.079),
+  0 4px 20px rgba(0, 0, 0, 0.1)
+
+paddedContainer()
+  width 100%
+  max-width containerWidth
+  padding-left 2rem
+  padding-right 2rem
+
+coloredBtn(color)
+  btn()
+  background linear-gradient(top, color, darken(color, 10%))
+  box-shadow 0 0.1px 2.2px rgba(0, 0, 0, 0.07),
+  0 0.3px 5.3px rgba(0, 0, 0, 0.05),
+  0 0.6px 10px rgba(0, 0, 0, 0.042),
+  0 1.1px 17.9px rgba(0, 0, 0, 0.035),
+  0 2.1px 33.4px rgba(0, 0, 0, 0.028),
+  0 5px 80px rgba(0, 0, 0, 0.02)
+
+  &:hover
+    background linear-gradient(top, darken(color, 2%), darken(color, 12%))
+
+  &:active
+    background linear-gradient(top, darken(color, 8%), darken(color, 2%))
+
+btn()
+  align-items center
+  justify-content center
+  color white
+  border-radius 4px
+  font-size 0.875rem
+  display flex
+  padding 0 1.75rem
+  height 2.5rem
+  letter-spacing 0.04rem
+  transition background-color 120ms ease-in, box-shadow 120ms ease
+  font-weight bold
