@@ -42,34 +42,6 @@ class Twig
                 'walker' => new BEMMenuWalker('nav')
             ]),
             'footer' => [
-                'tl' => wp_nav_menu([
-                    'menu' => 'footermenu1getaquote',
-                    'container' => '',
-                    'echo' => false,
-                    'menu_class' => 'nav footer__nav',
-                    'walker' => new BEMMenuWalker('nav')
-                ]),
-                'tr' => wp_nav_menu([
-                    'menu' => 'footermenu2scc',
-                    'echo' => false,
-                    'container' => '',
-                    'menu_class' => 'nav footer__nav',
-                    'walker' => new BEMMenuWalker('nav')
-                ]),
-                'bl' => wp_nav_menu([
-                    'menu' => 'footermenu3faqs',
-                    'echo' => false,
-                    'container' => '',
-                    'menu_class' => 'nav footer__nav',
-                    'walker' => new BEMMenuWalker('nav')
-                ]),
-                'br' => wp_nav_menu([
-                    'menu' => 'footermenu4usefulinfo',
-                    'echo' => false,
-                    'container' => '',
-                    'menu_class' => 'nav footer__nav',
-                    'walker' => new BEMMenuWalker('nav')
-                ]),
                 'tail' => wp_nav_menu([
                     'menu' => 'footer-metamenu',
                     'echo' => false,
